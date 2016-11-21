@@ -79,5 +79,5 @@ with tf.Session() as session:
     # accuacy on test
     print("test accuracy %g"%(accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0})))
     saver = tf.train.Saver()
-    save_path = saver.save(sess, "./model")
+    save_path = saver.save(session, "./model")
     print("Model saved in file: %s" % save_path)
